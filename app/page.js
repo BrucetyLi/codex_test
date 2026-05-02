@@ -233,10 +233,16 @@ export default function Home() {
                 </select>
               </label>
             </div>
-            <label>
-              期望时间
-              <input type="datetime-local" />
-            </label>
+            <div className="form-grid">
+              <label>
+                宠物数量
+                <input type="number" min="1" max="20" defaultValue="1" />
+              </label>
+              <label>
+                期望时间
+                <input type="datetime-local" />
+              </label>
+            </div>
             <label>
               宠物情况
               <textarea placeholder="例如：泰迪 5kg，轻微打结，比较怕吹风"></textarea>
