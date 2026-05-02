@@ -1,4 +1,9 @@
 export default function Home() {
+  const expectedArrivalDate = new Date();
+  expectedArrivalDate.setDate(expectedArrivalDate.getDate() + 1);
+  expectedArrivalDate.setHours(9, 0, 0, 0);
+  const expectedArrivalDateValue = `${expectedArrivalDate.getFullYear()}-${String(expectedArrivalDate.getMonth() + 1).padStart(2, '0')}-${String(expectedArrivalDate.getDate()).padStart(2, '0')}T${String(expectedArrivalDate.getHours()).padStart(2, '0')}:${String(expectedArrivalDate.getMinutes()).padStart(2, '0')}`;
+
   return (
     <>
       <header className="topbar">
@@ -240,7 +245,7 @@ export default function Home() {
               </label>
               <label>
                 期望时间
-                <input type="datetime-local" />
+                <input type="datetime-local" defaultValue={expectedArrivalDateValue} />
               </label>
             </div>
             <label>
